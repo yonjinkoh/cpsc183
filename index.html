@@ -68,7 +68,7 @@
 
 <div class="splash-container">
 
-  <iframe id="video" src="https://www.youtube.com/embed/C5pKtnmHTxg?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+  <iframe id="video" src="https://www.youtube.com/embed/C5pKtnmHTxg?rel=0&autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
     
     <div id="fade-in"></div>
 
@@ -222,6 +222,9 @@ $(document).ready(function(){
 
 $("#get-started").click(function() {
     $("#fade-in").animate({opacity: 1 }, 3000, function(){
+        $("#fade-in").css("opacity", 0);
+        $("#video").attr("src", "https://www.youtube.com/embed/KtHqRlDb4Ec?rel=0&autoplay=1");
+        $("banner-text").css("opacity", 0);
     });
 
     $("#banner-text").animate({opacity: 0}, 3000, function() {
